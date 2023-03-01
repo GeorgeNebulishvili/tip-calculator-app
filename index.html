@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link 
+        rel="icon" 
+        type="image/png" 
+        sizes="32x32" 
+        href="./images/favicon-32x32.png">
+    <title>tip-calculator-app</title>
+</head>
+<body>
+    <img src="./images/logo.svg" alt="" class="logo">
+    <div class="main">
+        <div class="bill">
+            <h2 class="bill">bill</h2>
+            <input 
+            type="text" 
+            class="input"
+            name="amount" 
+            id="amount" 
+            placeholder ="0"
+            />   
+        </div>
+        <div class="tips">
+            <h2 class="tip%">select tip %</h2>
+            <div class="buttons">
+                <button class="button 5">5%</button>
+                <button class="button 10">10%</button>
+                <button class="button 15">15%</button>
+                <button class="button 25">25%</button>
+                <button class="button 50">50%</button>
+                <input placeholder ="Custom"class="button custom"></input>
+            </div>
+        </div>
+        <div class="people">
+            <h2 class="ppl">number of people</h2>
+            <div class="error"></div>
+            <input 
+            type="text" 
+            class="input"
+            name="numppl" 
+            id="peop" 
+            placeholder ="0"
+            />   
+        </div>
+        <div class="totals">
+            <div class="tipamount">
+                <div class="tiptext">
+                    <h2 class="text">tip amount</h2>
+                    <p class="prs">/ person</p>
+                </div>
+                <div class="tip total">5$</div>
+            </div>
+            
+            <div class="totalamount">
+                <div class="ttltext">
+                    <h2 class="text">total</h2>
+                    <p class="prs">/ person</p>
+                </div>
+                <div class="total">45$</div>
+            </div>
+            <button class="reset">reset</button>
+        </div> 
+    </div>
+</body>
+</html>
