@@ -46,7 +46,6 @@ let tipValue = 0;
 function billInputFunction () {
     billValue = parseFloat(billInput.value)
     calculateTotals();
-    console.log(billValue);
 }
 
 function peopleInputFunction () {
@@ -54,6 +53,8 @@ function peopleInputFunction () {
     if (peopleValue < 1) {
       peopleInput.classList.add('error');
       error.style.display = "inline-block";
+      tipPerPerspn.innerHTML = "$" + (0.0).toFixed(2);
+      totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
     } else {
       peopleInput.classList.remove('error');
       error.style.display = "none";
@@ -62,7 +63,7 @@ function peopleInputFunction () {
 }
 
 function resetFunction () {
-    billInput.value = "0.0";
+    billInput.value = "";
     peopleInput.value = "1";
     tipPerPerspn.innerHTML = "$" + (0.0).toFixed(2);
     totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
