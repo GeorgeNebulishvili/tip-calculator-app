@@ -17,14 +17,8 @@
     <img src="./images/logo.svg" alt="" class="logo">
     <div class="main">
         <div class="bill">
-            <h2 class="bill">bill</h2>
-            <input 
-            type="text" 
-            class="input"
-            name="amount" 
-            id="amount" 
-            placeholder ="0"
-            />   
+            <label for="billinput">Bill:</label>
+            <input type="number" id="billinput" class="billinput input" />
         </div>
         <div class="tips">
             <h2 class="tip%">select tip %</h2>
@@ -40,21 +34,16 @@
         <div class="people">
             <h2 class="ppl">number of people</h2>
             <div class="error"></div>
-            <input 
-            type="text" 
-            class="input"
-            name="numppl" 
-            id="peop" 
-            placeholder ="0"
-            />   
+            <label for="people">Bill:</label>
+            <input type="number" id="people" class="input peopleinput" />
         </div>
         <div class="totals">
             <div class="tipamount">
                 <div class="tiptext">
-                    <h2 class="text">tip amount</h2>
+                    <h2 class="text-tip-amount text">tip amount</h2>
                     <p class="prs">/ person</p>
                 </div>
-                <div class="tip total">5$</div>
+                <div class="tip total tip-amount"></div>
             </div>
             
             <div class="totalamount">
@@ -62,10 +51,11 @@
                     <h2 class="text">total</h2>
                     <p class="prs">/ person</p>
                 </div>
-                <div class="total">45$</div>
+                <div class="total-amount"></div>
             </div>
             <button class="reset">reset</button>
         </div> 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
