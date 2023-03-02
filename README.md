@@ -1,1 +1,2 @@
-# tip-calculator-app
+# tip-calculator-app --- Work in progress ...
+https://georgenebulishvili.github.io/tip-calculator-app/
