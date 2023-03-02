@@ -32,7 +32,7 @@ customButton.addEventListener('input', () => {
   });
 
 
-billInput.value = "0.0";
+billInput.value = "";
 peopleInput.value = "1";
 tipPerPerspn.innerHTML = "$" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
@@ -61,9 +61,9 @@ function resetFunction () {
     tipPerPerspn.innerHTML = "$" + (0.0).toFixed(2);
     totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
     buttons.forEach(btn => btn.classList.remove('active'));
-    billValue = 0.0;
+    billValue = "";
     peopleValue = 1;
-    tipValue = 0;
+    tipValue = "";
     customButton.value = "";
 }
 
