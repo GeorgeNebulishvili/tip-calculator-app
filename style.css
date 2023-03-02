@@ -172,7 +172,9 @@ body    {
 }
 
 .people
-, .bill {
+, .bill
+, .tippercent
+ {
     width: 100%;
     font-weight: 700;
     font-size: 16px;
