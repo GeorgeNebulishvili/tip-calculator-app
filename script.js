@@ -5,6 +5,7 @@ const totalPerPerson = document.querySelector(".total-amount");
 const reset = document.querySelector(".reset");
 const buttons = document.querySelectorAll('.buttons button');
 const customButton = document.querySelector('.buttons .custom');
+const error = document.querySelector(".error");
 
 billInput.addEventListener("input", billInputFunction);
 peopleInput.addEventListener("input", peopleInputFunction);
@@ -19,7 +20,7 @@ buttons.forEach(button => {
       tipValue = parseInt(button.innerText) / 100;
       //ტოტალების კალკულაცია გამოიძახე
       calculateTotals();
-      console.log(tipValue);
+      customButton.value = "";
     });
   });
 customButton.addEventListener('input', () => {
@@ -28,7 +29,6 @@ customButton.addEventListener('input', () => {
     // ცვლადის ველიუ განაახლე
     tipValue = parseFloat(customButton.value) / 100;
     calculateTotals();
-    console.log(tipValue);
   });
 
 
@@ -38,7 +38,7 @@ tipPerPerspn.innerHTML = "$" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 
 
-let billValue = 0.0;
+let billValue = "";
 let peopleValue = 1;
 let tipValue = 0;
 
@@ -51,8 +51,14 @@ function billInputFunction () {
 
 function peopleInputFunction () {
     peopleValue =parseFloat(peopleInput.value)
-    calculateTotals();
-    console.log(peopleValue);
+    if (peopleValue < 1) {
+      peopleInput.classList.add('error');
+      error.style.display = "inline-block";
+    } else {
+      peopleInput.classList.remove('error');
+      error.style.display = "none";
+      calculateTotals();
+    }
 }
 
 function resetFunction () {
@@ -72,8 +78,9 @@ function calculateTotals() {
     let totalPerPersonValue = (billValue / peopleValue) + tipPerPersonValue;
     tipPerPerspn.innerHTML = "$" + tipPerPersonValue.toFixed(2);
     totalPerPerson.innerHTML = "$" + totalPerPersonValue.toFixed(2);
-    console.log(tipPerPersonValue);
   }
+
+
   
 
 

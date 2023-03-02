@@ -59,7 +59,7 @@ body    {
     margin-bottom: 32px;
     margin-top: 6px;
     height: 48px;
-    background-position: left center;
+    background-position: left 5% center;
     cursor: pointer;
     font-weight: 700;
     font-size: 24px;
@@ -98,7 +98,7 @@ body    {
     margin-bottom: 32px;
     margin-top: 6px;
     height: 48px;
-    background-position: left center;
+    background-position: left 5% center;
     cursor: pointer;
     font-weight: 700;
     font-size: 24px;
@@ -211,3 +211,18 @@ body    {
     text-align: right;
     color: var(--hover)
 }
+
+
+
+.error  {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #E17457;
+}
+
+.error-div    {
+    display: flex;
+    justify-content: space-between;
+  }
